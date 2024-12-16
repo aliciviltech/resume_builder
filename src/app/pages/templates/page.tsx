@@ -33,6 +33,7 @@ const Template = () => {
         if(selectedTemplate){
             localStorage.setItem('selectedTemplate', selectedTemplate);
         }
+        setShowLoader(true)
     }
     return (
         <>
@@ -59,7 +60,7 @@ const Template = () => {
                     selectedTemplate &&
                     <div className="selectionContainer flex-col flex justify-center items-center gap-5">
                         <h1 className='headingH2'>Your selected template: <span className='border-b-2 border-[var(--primaryColor)]'>{selectedTemplate.toUpperCase()}</span></h1>
-                        <Link href={'/pages/resume_form'} onClick={() => { saveTemplateF(), setShowLoader(true) }}><SecondaryButton text='Continue' /></Link>
+                        <Link href={'/pages/resume_form'} onClick={saveTemplateF}><SecondaryButton text='Continue' /></Link>
                     </div>
                     
                 }

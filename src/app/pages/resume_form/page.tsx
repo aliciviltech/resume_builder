@@ -21,6 +21,14 @@ const ResumeForm = () => {
   const currentYear = new Date().getFullYear();
   const years = Array.from({ length: currentYear - 1970 + 1 }, (_, i) => 1970 + i);
   const [dateInputType, setDateInputType] = useState('text')
+
+  // set date input type
+  const handleDateType=(e:React.ChangeEvent<HTMLInputElement>)=>{
+    if(!e.target.value){
+      setDateInputType('text')
+    }
+  }
+
   const [inputs] = useState({
     name: '',
     profession: '',
@@ -78,7 +86,7 @@ const ResumeForm = () => {
       // setValue(userContextValue.formData)
       reset(userContextValue.formData?.formData);
     }
-  },[])
+  },[userContextValue])
 
   const submitAlert = ()=> toast.success('Submitted')
 
@@ -130,7 +138,7 @@ const ResumeForm = () => {
               selectedTemplate &&
               <div className="selectedTemplate flex flex-col justify-center items-center">
                 <h1 className='headingH2'>Your selected template: <span className='border-b-2 border-[var(--primaryColor)]'>{selectedTemplate.toUpperCase()}</span></h1>
-                <Image className='w-[200px] border-2 border-orange-500 mt-5 p-2' src={`${templateImages[selectedTemplate].src}`} alt="templateImg" width={300} height={300} />
+                <Image className='w-[200px] border-2 border-orange-500 mt-5 p-2' src={templateImages[selectedTemplate]} alt="templateImg" width={300} height={300} />
               </div>
             }
             {
@@ -167,7 +175,7 @@ const ResumeForm = () => {
             <input  {...register("name", { required: true })} className='border border-[#ccc] px-2' placeholder='Name' />
             <input  {...register("profession", { required: true })} className='border border-[#ccc] px-2' placeholder='Profession' />
             <input  {...register("summary",)} className='border border-[#ccc] px-2' placeholder='Summary' />
-            <input type={dateInputType} {...register("dob",)} className='border border-[#ccc] px-2' placeholder='Date of birth' onFocus={() => { setDateInputType('date') }} onBlur={(e) => { !e.target.value && setDateInputType('text') }} />
+            <input type={dateInputType} {...register("dob",)} className='border border-[#ccc] px-2' placeholder='Date of birth' onFocus={() => { setDateInputType('date') }} onBlur={handleDateType} />
             <input  {...register("nationality",)} className='border border-[#ccc] px-2' placeholder='Nationality' />
             <input  {...register("phone",)} className='border border-[#ccc] px-2' placeholder='Phone' />
             <input  {...register("email",)} className='border border-[#ccc] px-2' placeholder='Email' />
