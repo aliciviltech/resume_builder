@@ -1,13 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { getAuth,createUserWithEmailAndPassword ,onAuthStateChanged,signInWithEmailAndPassword   } from "firebase/auth";
 const firebaseConfig = {
-  apiKey: "AIzaSyBDJETOpuniySRwXr4kBB39tK5hyeRZsDI",
-  authDomain: "first-project-f5cda.firebaseapp.com",
-  projectId: "first-project-f5cda",
-  storageBucket: "first-project-f5cda.appspot.com",
-  messagingSenderId: "581803347371",
-  appId: "1:581803347371:web:849b31ce001387e86ad6ee",
-  measurementId: "G-L0081003DY"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+
 };
 
 const app = initializeApp(firebaseConfig);
