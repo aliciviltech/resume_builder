@@ -1,3 +1,6 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { StaticImageData } from "next/image";
+
 export interface educationType {
   degree: string,
   subject: string,
@@ -28,7 +31,7 @@ export interface Inputs {
   languages?: { name: string }[],
   experience: experienceType[],
 };
-export interface formDataType { template: string, formData: Inputs, imageURL?: string| ArrayBuffer |null }
+export interface formDataType { template: string, formData: Inputs, imageURL?: string | ArrayBuffer |null }
 
 export const dummyUserData: Inputs = {
   name: 'John Daniel',

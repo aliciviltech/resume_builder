@@ -22,7 +22,7 @@ const Vintage = () => {
 
             <div className="leftCol">
                 {
-                    userContextValue.formData?.imageURL &&
+                    typeof userContextValue.formData?.imageURL === 'string' &&
                     <div className="image p-4">
                         <Image className=' w-[100%] rounded-full border-white border-[0.8vmin] lg:border-8' src={userContextValue.formData?.imageURL} alt='' width={250} height={250} />
                     </div>
