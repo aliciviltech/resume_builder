@@ -1,0 +1,94 @@
+.Signin{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #e78515, 70%, #020202);
+    position: relative;
+}
+.Signin .logo{
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    cursor: pointer;
+}
+.Signin .logo img{
+    width: 250px;
+}
+.Signin .contentArea{
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 10px black;
+    padding: 20px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.Signin .form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Signin input{
+    height: 40px;
+    border: 1px solid #969696;
+    padding: 0 10px;
+    border-radius: 3px;
+}
+.Signin .loginBtn{
+    background-color: #000000;
+    color: #fff;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+.Signin .borderLine{
+    height: 2px;
+    background-color: #2b2a2a;
+    width: 90%;
+    margin: auto;
+    margin: 20px;
+}
+.Signin .socialBtnContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.Signin .socialBtn{
+    width: 300px;
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    border-radius: 3px;
+}
+.Signin .socialBtn img{
+    width: 20px;
+}
+
+@media screen and (max-width:600px) {
+    .Signin{
+        flex-direction: column;
+        gap: 50px;
+        padding: 50px 0;
+    }
+    .Signin .logo{
+        position: static;
+    }
+.Signin .contentArea{
+    width: 90%;
+}
+.Signin .contentArea button{
+    width: 100%;
+}
+}

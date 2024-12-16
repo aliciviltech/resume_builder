@@ -1,0 +1,135 @@
+.ResumeFormContainer {
+    min-height: 100vh;
+    padding: 50px 0;
+}
+.ResumeFormContainer form {
+    width: 90%;
+    margin:auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.ResumeFormContainer form .picture{
+    display: flex;
+    gap: 20px;
+}
+.ResumeFormContainer form .pictureContainer{
+    width: 120px;
+    height: 150px;
+    /* border: 1px solid gray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ResumeFormContainer form .pictureContainer img{
+    width: 100%;
+}
+.ResumeFormContainer form .picture ul{
+    font-size: 14px;
+    color: rgb(12, 181, 88);
+}
+.ResumeFormContainer form .picture ul li:last-child{
+    margin-top: 10px;
+    color: #000;
+}
+.ResumeFormContainer form .sectionTitle{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.ResumeFormContainer form .subSectionTitle{
+    color: gray;
+}
+.ResumeFormContainer form input{
+    width: 48%;
+    padding: 5px 10px;
+    border: 1px solid #a7a7a7;
+}
+.ResumeFormContainer form input:focus{
+    background-color: rgba(0, 255, 255, 0.241);
+}
+.ResumeFormContainer form .basicInfo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 10px;
+}
+.ResumeFormContainer form .education{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+} 
+.ResumeFormContainer form .education .educationInputs{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    gap: 20px;
+    border: 1px solid #a7a7a7;
+    padding: 20px;
+    /* background-color: aqua; */
+    width: 100%;
+}
+.ResumeFormContainer form .education input{
+    width: 30%;
+}
+
+.ResumeFormContainer form .education select{
+    width: 30%;
+    padding: 5px 10px;
+    border: 1px solid #a7a7a7;
+}
+.ResumeFormContainer form .addButton{
+    background-color: #d2d1d1;
+    border-radius: 5px;
+    padding: 3px 14px;
+}
+.ResumeFormContainer form .removeButton{
+    background-color: #811919;
+    color: #fff;
+    border-radius: 5px;
+    padding: 3px 14px;
+}
+.ResumeFormContainer form .skills{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+.ResumeFormContainer form .skillsInputs{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    gap: 20px;
+    border: 1px solid #a7a7a7;
+    padding: 20px;
+    /* background-color: aqua; */
+    width: 100%;
+}
+.ResumeFormContainer form .experience{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+.ResumeFormContainer form .experienceInputs{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    gap: 20px;
+    border: 1px solid #a7a7a7;
+    padding: 20px;
+    /* background-color: aqua; */
+    width: 100%;
+}
+.ResumeFormContainer form .submitButton{
+    width: 200px;
+    padding: 5px 0;
+    background-color: var(--primaryColor);
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+

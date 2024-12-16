@@ -1,0 +1,77 @@
+.Classic {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===================== header ====================== */
+.Classic .header{
+    height: 200px;
+    width: 100%;
+    margin: auto;
+    background-color: rgb(190, 190, 190);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding-left: 5vmin;
+}
+.Classic .header .name{
+    font-size: 45px;
+  font-weight: bold;
+}
+.Classic .header .profession{
+    font-size: 30px;
+    
+}
+
+
+/* ===================== main body ====================== */
+.Classic .mainBody{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.Classic .sectionTitle{
+    font-size: 22px;
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+}
+.Classic .sectionContent{
+    margin-top: 20px;
+}
+
+
+
+@media screen and (max-width:1024px) {
+    .Classic .header{
+        height: 25vmin;
+        gap: 1vmin;
+        padding-left: 5vmin;
+    }
+    .Classic .header .name{
+        font-size: 5vmin;
+    }
+    .Classic .header .profession{
+        font-size: 3vmin;
+    }
+
+    /* =================main body =================== */
+    .Classic .mainBody{
+        padding: 5vmin;
+        gap: 3vmin;
+    }
+    .Classic .sectionTitle{
+        font-size: 22px;
+        border-bottom: 2px solid gray;
+        
+        padding-bottom: 1vmin;
+        font-size: 2vmin;
+    }
+    .Classic .sectionContent{
+        margin-top: 2vmin;
+
+        font-size: 1.5vmin;
+    }
+    
+}

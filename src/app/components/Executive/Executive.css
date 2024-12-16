@@ -1,0 +1,107 @@
+.Executive {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===================== header ====================== */
+.Executive .header{
+    height: 200px;
+    width: 100%;
+    margin: auto;
+    background-color: var(--primaryColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding-left: 5vmin;
+    color: #fff;
+}
+.Executive .header .name{
+    font-size: 45px;
+  font-weight: bold;
+}
+.Executive .header .profession{
+    font-size: 30px;
+    
+}
+
+
+/* ===================== main body ====================== */
+.Executive .mainBody{
+    display: flex;
+}
+.Executive .leftCol{
+    width: 70%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.Executive .sectionTitle{
+    font-size: 22px;
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+}
+.Executive .sectionContent{
+    margin-top: 20px;
+}
+.Executive .sectionContent .col1{
+    width: 140px;
+}
+
+.Executive .rightCol{
+    width: 30%;
+    background-color: rgb(182, 180, 180);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+@media screen and (max-width:1024px) {
+    .Executive .header{
+        height: 25vmin;
+        gap: 1vmin;
+        padding-left: 5vmin;
+    }
+    .Executive .header .name{
+        font-size: 5vmin;
+    }
+    .Executive .header .profession{
+        font-size: 3vmin;
+    }
+
+    /* =================main body =================== */
+    .Executive .leftCol{
+        width: 70%;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        padding: 5vmin;
+        gap: 3vmin;
+    }
+    .Executive .sectionTitle{
+        font-size: 22px;
+        border-bottom: 2px solid gray;
+        
+        padding-bottom: 1vmin;
+        font-size: 2vmin;
+    }
+    .Executive .sectionContent{
+        margin-top: 2vmin;
+
+        font-size: 1.5vmin;
+    }
+    
+    .Executive .rightCol{
+        width: 30%;
+        background-color: gray;
+        padding: 10px;
+        padding-top: 0;
+    }
+}

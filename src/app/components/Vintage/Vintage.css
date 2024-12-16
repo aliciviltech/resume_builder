@@ -1,0 +1,124 @@
+.Vintage {
+    display: flex;
+}
+
+/* ============================= left col ================================= */
+.Vintage .leftCol{
+    width: 30%;
+    min-height: 1447px;
+    background-color: #163853;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 30px;
+    color: #fff;
+}
+.Vintage .sectionTitleLeft{
+    font-size: 26px;
+    color: #fff;
+}
+
+/* ===================== right Col ====================== */
+.Vintage .rightCol{
+    width: 70%;
+    height: fit-content;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.Vintage .header{
+    height: 300px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding-left: 5vmin;
+}
+.Vintage .header .name{
+    font-size: 60px;
+  font-weight: bold;
+  color: var(--tertiaryColor);
+}
+.Vintage .header .profession{
+    font-size: 30px;
+    color: var(--grayText);
+
+}
+.Vintage .header .borderDiv{
+    width: 100px;
+    height: 5px;
+    background-color: var(--tertiaryColor);
+}
+
+.Vintage .sectionTitle{
+    font-size: 26px;
+    color: var(--tertiaryColor);
+    border-bottom: 2px solid var(--tertiaryColor);
+    padding-bottom: 10px;
+}
+.Vintage .sectionContent{
+    margin-top: 20px;
+}
+.Vintage .sectionContent .col1{
+    width: 140px;
+}
+
+
+
+
+
+@media screen and (max-width:1024px) {
+   
+    /* ==================== left col =================== */
+    .Vintage .leftCol{
+        width: 30%;
+        min-height: fit-content;
+        padding: 10px;
+        padding-top: 0;
+        gap: 3vmin;
+    }
+    .Vintage .sectionTitleLeft{
+        padding-bottom: 1vmin;
+        font-size: 2vmin;
+    }
+
+     /* =================right col =================== */
+     .Vintage .rightCol{
+        padding: 3vmin;
+        gap: 3vmin;
+    }
+    .Vintage .header{
+        height: 25vmin;
+        gap: 1vmin;
+        padding-left: 5vmin;
+    }
+    .Vintage .header .name{
+        font-size: 5vmin;
+    }
+    .Vintage .header .profession{
+        font-size: 3vmin;
+    }
+    .Vintage .header .borderDiv{
+        width: 10vmin;
+        height: 1px;
+        background-color: var(--tertiaryColor);
+    }
+
+    .Vintage .sectionTitle{
+        border-width: 1px;
+        padding-bottom: 1vmin;
+        font-size: 2vmin;
+    }
+    .Vintage .sectionContent{
+        margin-top: 2vmin;
+        font-size: 1.5vmin;
+    }
+    .Vintage .sectionContent .col1{
+        width: 15vmin;
+    }
+    
+}
