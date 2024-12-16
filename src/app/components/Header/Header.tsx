@@ -4,7 +4,7 @@ import {SecondaryButton, TertiaryButton } from '../Button/Button'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
-const Header = ({showLoader, setShowLoader}:{showLoader:boolean, setShowLoader: React.Dispatch<React.SetStateAction<boolean>>}) => {
+const Header = ({setShowLoader}:{setShowLoader: React.Dispatch<React.SetStateAction<boolean>>}) => {
     const [hideMenu, setHideMenu] = useState<boolean>(true) 
     const path = usePathname();
     const handleLoader = (currentPath:string)=>{

@@ -21,7 +21,7 @@ const ResumeForm = () => {
   const currentYear = new Date().getFullYear();
   const years = Array.from({ length: currentYear - 1970 + 1 }, (_, i) => 1970 + i);
   const [dateInputType, setDateInputType] = useState('text')
-  const [inputs, setInputs] = useState({
+  const [inputs] = useState({
     name: '',
     profession: '',
     summary: '',
@@ -53,7 +53,7 @@ const ResumeForm = () => {
 
   
 
-  const { register, handleSubmit,reset, watch, setValue, control, formState: { errors } } = useForm<Inputs>({
+  const { register, handleSubmit,reset,control } = useForm<Inputs>({
     defaultValues: inputs
   });
   const { fields: educationFields, append: addEducation, remove: removeEducation } = useFieldArray<Inputs, "education">({
@@ -116,7 +116,7 @@ const ResumeForm = () => {
   
   return (
     <div className='ResumeForm'>
-      <Header showLoader={showLoader} setShowLoader={setShowLoader} />
+      <Header  setShowLoader={setShowLoader} />
       <div className="ResumeFormContainer">
         <h1 className='headingH4 text-center '>Resume Builder Form</h1>
         {/* <h1>{selectedImage}</h1> */}

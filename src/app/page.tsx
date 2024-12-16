@@ -5,7 +5,7 @@ import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Loader from './components/Loader/Loader'
 
-const page = () => {
+const Home = () => {
 
   const [showLoader, setShowLoader] = useState<boolean>(false)
   
@@ -13,7 +13,7 @@ const page = () => {
     <div className='Home'>
 
 
-      <Header showLoader={showLoader} setShowLoader={setShowLoader}/>
+      <Header setShowLoader={setShowLoader}/>
       <Hero/>
       {
         showLoader && <Loader/>
@@ -23,4 +23,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Home

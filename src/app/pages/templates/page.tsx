@@ -8,7 +8,7 @@ import Link from 'next/link'
 import Loader from '@/app/components/Loader/Loader'
 import { UserContextValue } from '@/app/context/UserContext'
 
-const page = () => {
+const Template = () => {
     // context: UserContext
     const userContextValue = useContext(UserContextValue);
     const [changeTemplate, setChangeTemplate] = useState(false)
@@ -30,11 +30,13 @@ const page = () => {
     }
     // save template to local storage
     const saveTemplateF = () => {
-        selectedTemplate && localStorage.setItem('selectedTemplate', selectedTemplate);
+        if(selectedTemplate){
+            localStorage.setItem('selectedTemplate', selectedTemplate);
+        }
     }
     return (
         <>
-            <Header showLoader={showLoader} setShowLoader={setShowLoader} />
+            <Header setShowLoader={setShowLoader} />
             <div className='templatesComp'>
                 <h1 className='headingH4'>Select any template you like!</h1>
                 <p className='px-4 md:w-[70%] xl:w-[60%]'>Choose from one of our expertly prepared resume types below, by using pre-established parts that have been endorsed by recruiters internationally.</p>
@@ -59,6 +61,7 @@ const page = () => {
                         <h1 className='headingH2'>Your selected template: <span className='border-b-2 border-[var(--primaryColor)]'>{selectedTemplate.toUpperCase()}</span></h1>
                         <Link href={'/pages/resume_form'} onClick={() => { saveTemplateF(), setShowLoader(true) }}><SecondaryButton text='Continue' /></Link>
                     </div>
+                    
                 }
 
 
@@ -104,4 +107,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Template

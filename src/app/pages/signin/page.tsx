@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './Signin.css'
 import { useForm, SubmitHandler } from "react-hook-form";
 import { auth, onAuthStateChanged, signInWithEmailAndPassword } from '@/app/firebase/firebaseConfig'
@@ -34,7 +34,7 @@ const Signin = () => {
       if (user) {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
-        const uid = user.uid;
+        
         // window.location.href = "/pages/dashboard"
         console.log('signed in')
       } else {
@@ -80,7 +80,7 @@ const Signin = () => {
       <button className='socialBtn'> <img src="/images/google_icon.png" /> Signin with Google</button>
       <button className='socialBtn'> <img src="/images/fb_icon.png" />Signin with Facebook</button>
 </div>
-        <p className='mt-2 text-[14px] text-center '>Don't have account? <Link href={'/pages/signin'} className=' underline '>Signup</Link></p>
+        <p className='mt-2 text-[14px] text-center '>{"Don't"} have account? <Link href={'/pages/signin'} className=' underline '>Signup</Link></p>
 
       </div>
       </div>

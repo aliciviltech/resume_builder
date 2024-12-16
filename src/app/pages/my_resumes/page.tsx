@@ -9,7 +9,7 @@ import { UserContextValue } from '@/app/context/UserContext'
 import Classic from '@/app/components/Classic/Classic'
 import Vintage from '@/app/components/Vintage/Vintage'
 
-const page = () => {
+const MyResumes = () => {
   const cvContainer = useRef<HTMLDivElement>(null)
   const [showLoader, setShowLoader] = useState<boolean>(false)
   const userContextValue = useContext(UserContextValue);
@@ -58,7 +58,7 @@ const page = () => {
 
   return (
     <>
-      <Header showLoader={showLoader} setShowLoader={setShowLoader} />
+      <Header setShowLoader={setShowLoader} />
 
       <div className='myResumes flex flex-col items-center justify-center mt-10'>
         <div className='text-lg w-[90%] mx-auto flex justify-between my-10'>
@@ -94,4 +94,4 @@ const page = () => {
   )
 }
 
-export default page
+export default MyResumes
