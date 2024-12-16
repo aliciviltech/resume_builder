@@ -7,30 +7,31 @@ import { PrimaryButton, SecondaryButton } from '@/app/components/Button/Button'
 import Link from 'next/link'
 import Loader from '@/app/components/Loader/Loader'
 import { UserContextValue } from '@/app/context/UserContext'
+import Image from 'next/image'
 
 const Template = () => {
     // context: UserContext
     const userContextValue = useContext(UserContextValue);
     const [changeTemplate, setChangeTemplate] = useState(false)
-    
+
     const [showLoader, setShowLoader] = useState<boolean>(false)
     const { selectedTemplate, setSelectedTemplate } = useContext(TemplateContextValue);
 
     // select template
     const selectTemplateF = (templateTitle: string) => {
-        if(userContextValue.formData?.template === templateTitle){
+        if (userContextValue.formData?.template === templateTitle) {
             alert(`Template ${templateTitle} is already created. Go to "My Resume" page`)
             return
         }
         setSelectedTemplate(templateTitle)
         window.scrollTo({
-            top:0,
-            behavior:"smooth",
+            top: 0,
+            behavior: "smooth",
         })
     }
     // save template to local storage
     const saveTemplateF = () => {
-        if(selectedTemplate){
+        if (selectedTemplate) {
             localStorage.setItem('selectedTemplate', selectedTemplate);
         }
         setShowLoader(true)
@@ -46,23 +47,23 @@ const Template = () => {
                 {/* ============ template selection confirmation =========== */}
                 {
                     userContextValue && !changeTemplate ?
-                    <div className="selectionContainer  flex-col flex justify-center items-center gap-5">
-                        <h1 className='headingH2'>You have already created your resume in template: <span className='text-[var(--primaryColor)]'>{userContextValue.formData?.template.toUpperCase()}</span> </h1>
-                        <Link href={'/pages/my_resumes'} onClick={() => { setShowLoader(true) }}>
-                        <SecondaryButton text='Go to Resume' />
-                        </Link>
-                        <h1>Or</h1>
-                        <Link href={''} onClick={()=>setChangeTemplate(true)}>
-                            <PrimaryButton text='Change Template' />
-                        </Link>
-                    </div>
-                    :
-                    selectedTemplate &&
-                    <div className="selectionContainer flex-col flex justify-center items-center gap-5">
-                        <h1 className='headingH2'>Your selected template: <span className='border-b-2 border-[var(--primaryColor)]'>{selectedTemplate.toUpperCase()}</span></h1>
-                        <Link href={'/pages/resume_form'} onClick={saveTemplateF}><SecondaryButton text='Continue' /></Link>
-                    </div>
-                    
+                        <div className="selectionContainer  flex-col flex justify-center items-center gap-5">
+                            <h1 className='headingH2'>You have already created your resume in template: <span className='text-[var(--primaryColor)]'>{userContextValue.formData?.template.toUpperCase()}</span> </h1>
+                            <Link href={'/pages/my_resumes'} onClick={() => { setShowLoader(true) }}>
+                                <SecondaryButton text='Go to Resume' />
+                            </Link>
+                            <h1>Or</h1>
+                            <Link href={''} onClick={() => setChangeTemplate(true)}>
+                                <PrimaryButton text='Change Template' />
+                            </Link>
+                        </div>
+                        :
+                        selectedTemplate &&
+                        <div className="selectionContainer flex-col flex justify-center items-center gap-5">
+                            <h1 className='headingH2'>Your selected template: <span className='border-b-2 border-[var(--primaryColor)]'>{selectedTemplate.toUpperCase()}</span></h1>
+                            <Link href={'/pages/resume_form'} onClick={saveTemplateF}><SecondaryButton text='Continue' /></Link>
+                        </div>
+
                 }
 
 
@@ -74,7 +75,7 @@ const Template = () => {
                         <div className="templateCard" onClick={() => { selectTemplateF('classic') }}>
                             <div className="border1"></div>
                             <div className="border2"></div>
-                            <img src="/images/classic.png" />
+                            <Image src="/images/classic.png" alt='templateImg' width={300} height={400} />
                         </div>
                     </div>
 
@@ -83,7 +84,7 @@ const Template = () => {
                         <div className="templateCard" onClick={() => { selectTemplateF('executive') }}>
                             <div className="border1"></div>
                             <div className="border2"></div>
-                            <img src="/images/executive.png" />
+                            <Image src="/images/executive.png" alt='templateImg' width={300} height={400} />
                         </div>
                     </div>
 
@@ -92,7 +93,7 @@ const Template = () => {
                         <div className="templateCard" onClick={() => { selectTemplateF('vintage') }}>
                             <div className="border1"></div>
                             <div className="border2"></div>
-                            <img src="/images/vintage.jpg" />
+                            <Image src="/images/vintage.jpg" alt='templateImg' width={300} height={400} />
                         </div>
                     </div>
 

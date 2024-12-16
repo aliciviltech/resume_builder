@@ -4,6 +4,7 @@ import './Signin.css'
 import { useForm, SubmitHandler } from "react-hook-form";
 import { auth, onAuthStateChanged, signInWithEmailAndPassword } from '@/app/firebase/firebaseConfig'
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 type Inputs = {
@@ -51,10 +52,6 @@ const Signin = () => {
     <div className="Signin">
 
 
-      <div className="logo">
-        <img src="/images/logo.png" alt="" />
-      </div>
-
       <div className="contentArea">
 
       <div className="welcomeNote">
@@ -77,8 +74,8 @@ const Signin = () => {
       <div className="borderLine"></div>
 
 <div className="socialBtnContainer">
-      <button className='socialBtn'> <img src="/images/google_icon.png" /> Signin with Google</button>
-      <button className='socialBtn'> <img src="/images/fb_icon.png" />Signin with Facebook</button>
+      <button className='socialBtn'> <Image src="/images/google_icon.png" alt='icon' width={100} height={100}/> Signin with Google</button>
+      <button className='socialBtn'> <Image src="/images/fb_icon.png" alt='icon' width={100} height={100}/> Signin with Facebook</button>
 </div>
         <p className='mt-2 text-[14px] text-center '>{"Don't"} have account? <Link href={'/pages/signin'} className=' underline '>Signup</Link></p>
 
