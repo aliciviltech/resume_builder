@@ -130,7 +130,7 @@ const ResumeForm = () => {
         {/* <h1>{selectedImage}</h1> */}
 
         {/* ====================== form ================================ */}
-        <form onSubmit={handleSubmit(submitDataF)} className="w-[50%]  m-auto mt-10 flex flex-col">
+        <form  className="w-[50%]  m-auto mt-10 flex flex-col">
 
           <div className={`upperSection flex flex-row-reverse ${selectedTemplate === 'classic' ? "justify-center" : "justify-between"}  items-end`}>
             {
@@ -220,7 +220,7 @@ const ResumeForm = () => {
                       <input   {...register(`education.${index}.grade`)} className='border border-[#ccc] px-2' placeholder='Grade/Division' />
                       {
                         index > 0 &&
-                        <button className='removeButton' onClick={() => { removeEducation(index) }}>Remove Education</button>
+                        <button type='button' className='removeButton' onClick={() => { removeEducation(index) }}>Remove Education</button>
                       }
                     </div>
                   
@@ -228,7 +228,7 @@ const ResumeForm = () => {
               })
             }
 
-            <button className='addButton' onClick={() => { addEducation(inputs.education[0]) }}>Add Education</button>
+            <button type='button' className='addButton' onClick={() => { addEducation(inputs.education[0]) }}>Add Education</button>
           </div>
 
           {/* ============================ Skills ================================ */}
@@ -242,13 +242,13 @@ const ResumeForm = () => {
                     <input   {...register(`skills.${index}.name`)} className='border border-[#ccc] px-2' placeholder='Skill' />
                     {
                       index > 0 &&
-                      <button className='removeButton' onClick={() => { removeSkills(index) }}>Remove Skill</button>
+                      <button type='button' className='removeButton' onClick={() => { removeSkills(index) }}>Remove Skill</button>
                     }
                   </div>
 
                 )
               })}
-            <button className='addButton' onClick={() => { addSkills(inputs.skills[0]) }}>Add Skill</button>
+            <button type='button' className='addButton' onClick={() => { addSkills(inputs.skills[0]) }}>Add Skill</button>
 
           </div >
 
@@ -277,13 +277,13 @@ const ResumeForm = () => {
                       </select>
                       {
                         index > 0 &&
-                        <button className='removeButton' onClick={() => { removeExperience(index) }}>Remove Experience</button>
+                        <button type='button' className='removeButton' onClick={() => { removeExperience(index) }}>Remove Experience</button>
                       }
                     </div>
                   
                 )
               })}
-            <button className='addButton' onClick={() => { addExperience(inputs.experience[0]) }}>Add Experience</button>
+            <button type='button' className='addButton' onClick={() => { addExperience(inputs.experience[0]) }}>Add Experience</button>
 
           </div >
 
@@ -299,20 +299,20 @@ const ResumeForm = () => {
                     <input   {...register(`languages.${index}.name`)} className='border border-[#ccc] px-2' placeholder='Language' />
                     {
                       index > 0 &&
-                      <button className='removeButton' onClick={() => { removeLanguage(index) }}>Remove Skill</button>
+                      <button type='button' className='removeButton' onClick={() => { removeLanguage(index) }}>Remove Skill</button>
                     }
                   </div>
 
                 )
               })}
-            <button className='addButton' onClick={() => { addLanguage(inputs.languages[0]) }}>Add Language</button>
+            <button type='button' className='addButton' onClick={() => { addLanguage(inputs.languages[0]) }}>Add Language</button>
 
           </div >
 
 
 
 
-          <button className='submitButton'>Submit</button>
+          <button className='submitButton' onClick={handleSubmit(submitDataF)}>Submit</button>
         </form>
 
         <ToastContainer position='top-center' delay={6000}/>
