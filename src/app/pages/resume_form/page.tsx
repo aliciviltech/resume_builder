@@ -136,7 +136,7 @@ const ResumeForm = () => {
             {
               // =================== selected template ======================
               selectedTemplate &&
-              <div className="selectedTemplate flex flex-col justify-center items-center">
+              <div className="selectedTemplate flex flex-col justify-center items-center text-center">
                 <h1 className='headingH2'>Your selected template: <span className='border-b-2 border-[var(--primaryColor)]'>{selectedTemplate.toUpperCase()}</span></h1>
                 <Image className='w-[200px] border-2 border-orange-500 mt-5 p-2' src={templateImages[selectedTemplate]} alt="templateImg" width={300} height={300} />
               </div>

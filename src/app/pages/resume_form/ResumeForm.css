@@ -113,6 +113,11 @@
     gap: 20px;
     align-items: flex-start;
 }
+.ResumeFormContainer form .experience select{
+    width: 30%;
+    padding: 5px 10px;
+    border: 1px solid #a7a7a7;
+}
 .ResumeFormContainer form .experienceInputs{
     display: flex;
     flex-wrap: wrap;
@@ -133,3 +138,28 @@
 }
 
 
+@media screen and (max-width:600px) {
+.ResumeFormContainer form .upperSection{
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.ResumeFormContainer form .picture{
+    display: flex;
+    gap: 20px;
+
+    flex-direction: column;
+    align-items: center;
+}
+.ResumeFormContainer form input{
+    width: 100%;
+}
+.ResumeFormContainer form .education select,
+.ResumeFormContainer form .education input,
+.ResumeFormContainer form .experience input,
+.ResumeFormContainer form .experience select
+{
+    width: 100%;
+}
+    
+}

@@ -9,7 +9,7 @@ export const Button = ({text}:{text:string}) => {
 }
 export const PrimaryButton = ({text}:{text:string} )=>{
   return(
-    <div className="SecondaryButton w-[250px] cursor-pointer text-center bg-[var(--primaryColor)] text-white px-8 py-2 rounded-3xl "> {text} </div>
+    <div className="SecondaryButton md:w-[250px] w-[screen] cursor-pointer text-center bg-[var(--primaryColor)] text-white px-8 py-2 rounded-3xl "> {text} </div>
   )
 }
 export const SecondaryButton = ({text}:{text:string} )=>{

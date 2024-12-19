@@ -46,7 +46,7 @@ const Template = () => {
 
                 {/* ============ template selection confirmation =========== */}
                 {
-                    userContextValue && !changeTemplate ?
+                    userContextValue.formData && !changeTemplate ?
                         <div className="selectionContainer  flex-col flex justify-center items-center gap-5">
                             <h1 className='headingH2'>You have already created your resume in template: <span className='text-[var(--primaryColor)]'>{userContextValue.formData?.template.toUpperCase()}</span> </h1>
                             <Link href={'/pages/my_resumes'} onClick={() => { setShowLoader(true) }}>

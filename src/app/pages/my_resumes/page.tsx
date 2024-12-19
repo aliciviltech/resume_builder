@@ -61,10 +61,15 @@ const MyResumes = () => {
       <Header setShowLoader={setShowLoader} />
 
       <div className='myResumes flex flex-col items-center justify-center mt-10'>
+
+{
+  formData &&
         <div className='text-lg w-[90%] mx-auto flex justify-between my-10'>
           <span>My Resume</span>
           <span className='cursor-pointer' onClick={handlePrint}> <i className='fa-solid fa-print'></i> Print</span>
         </div>
+}
+
 
 
       {
@@ -78,9 +83,13 @@ const MyResumes = () => {
           <Executive />
         </div>
         : 
+        formData?.template === 'vintage' ?
         <div ref={cvContainer} className="resumeContainer w-[90%] m-auto">
           <Vintage />
         </div>
+        :
+        <h1 className='text-center text-gray-500'>No resume created</h1>
+
       }
 
       </div>

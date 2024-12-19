@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth,createUserWithEmailAndPassword ,onAuthStateChanged,signInWithEmailAndPassword   } from "firebase/auth";
+import { getAuth,createUserWithEmailAndPassword ,onAuthStateChanged,signInWithEmailAndPassword , signOut  } from "firebase/auth";
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -14,4 +14,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-export {auth,createUserWithEmailAndPassword ,onAuthStateChanged ,signInWithEmailAndPassword  }
+export {auth,createUserWithEmailAndPassword ,onAuthStateChanged ,signInWithEmailAndPassword ,signOut }
