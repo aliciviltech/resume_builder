@@ -1,7 +1,7 @@
 'use client'
 import { dummyUserData, formDataType } from '@/utils/dummyUserData';
 import React, { createContext, ReactNode, useEffect, useState } from 'react'
-import { auth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from '@/app/firebase/firebaseConfig'
+import { auth, onAuthStateChanged, signOut } from '@/app/firebase/firebaseConfig'
 
 interface UserData {
     isLogin:boolean | string, 
@@ -45,7 +45,7 @@ const UserContext = ({ children }: { children: ReactNode }) => {
         signOut(auth).then(() => {
             // Sign-out successful.
           }).catch((error) => {
-            // An error happened.
+            console.log(error)
           });
     }
 
